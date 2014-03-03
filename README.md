@@ -8,7 +8,10 @@ Overview
 
   * No dependecies;
   * generate image in `png`, `svg`, `eps` and `pdf` formats;
+  * numeric and alphanumeric modes;
   * support UTF-8.
+
+[Releases](https://github.com/alexeyten/qr-image/releases/)
 
 Usage
 -----
@@ -40,5 +43,6 @@ qr_svg.pipe(require('fs').createWriteStream('i_love_qr.svg'));
 TODO
 ----
 
-  * Numeric and alphanumeric modes.
-  * Tests (?).
+  * Tests;
+  * mixing modes;
+  * Kanji (???).
