@@ -35,12 +35,12 @@ qr_svg.pipe(require('fs').createWriteStream('i_love_qr.svg'));
   * `ec_level` — error correction level. One of `L`, `M`, `Q`, `H`. Default `M`.
   * `options` — image options object:
     * `ec_level` — default `M`.
-    * `type` — image type. Possible values `png` (default), `svg` (`svgPath`), `pdf` and `eps`.
+    * `type` — image type. Possible values `png` (default), `svg` (`svgpath`), `pdf` and `eps`.
     * `size` (only png) — size of one module in pixels. Default `5`.
     * `margin` (only png) — white space around QR image in modules. Default `4`.
     * `customize` (only png) — function to customize qr bitmap before encoding to PNG.
 
-`svgPath` is not really an image, but content of `d` attribute of corresponding SVG image.
+`svgpath` is not really an image, but content of `d` attribute of corresponding SVG image.
 
 
 TODO
