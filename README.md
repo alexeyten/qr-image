@@ -42,6 +42,8 @@ qr_svg.pipe(require('fs').createWriteStream('i_love_qr.svg'));
 
 `svgpath` is not really an image, but content of `d` attribute of corresponding SVG image.
 
+`qr.svgpathSync(text, [ec_level])` — returns SVG `d` attribute as plain string.
+
 
 TODO
 ----
