@@ -42,6 +42,8 @@ qr_svg.pipe(require('fs').createWriteStream('i_love_qr.svg'));
 
 `svgpath` is not really an image, but content of `d` attribute of corresponding SVG image.
 
+`qr.svgpathSync(text, [ec_level])` — returns an object `{ d: 'M1 1...', size: 32 }`, containing SVG `d` attribute and the size of the bounding square (so that you could set the `viewBox`).
+
 
 TODO
 ----
