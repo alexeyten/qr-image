@@ -45,7 +45,7 @@ var svg_string = qr.imageSync('I love QR!', { type: 'svg' });
   * `options` — image options object:
     * `ec_level` — default `M`.
     * `type` — image type. Possible values `png` (default), `svg`, `pdf` and `eps`.
-    * `size` (only png) — size of one module in pixels. Default `5`.
+    * `size` (png and svg only) — size of one module in pixels. Default `5` for png and `1` for others.
     * `margin` — white space around QR image in modules. Default `4` for `png` and `1` for others.
     * `customize` (only png) — function to customize qr bitmap before encoding to PNG.
 
