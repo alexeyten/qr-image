@@ -48,12 +48,14 @@ var svg_string = qr.imageSync('I love QR!', { type: 'svg' });
     * `size` (png and svg only) — size of one module in pixels. Default `5` for png and `1` for others.
     * `margin` — white space around QR image in modules. Default `4` for `png` and `1` for others.
     * `customize` (only png) — function to customize qr bitmap before encoding to PNG.
+    * `parse_url` (experimental, default `false`) — try to optimize QR-code for URLs.
 
 Changes
 -------
 
-  * `svgpath` type is deprecated. Use `svgObject` method instead.
-  * `margin` option is used for vector formats.
+  * `size` option is also used for SVG.
+  * Add experimental `parse_url` option. First attemt to mix modes.
+  * Fix weird bug witch CRC32 calculation on Raspberry Pi.
 
 
 TODO
