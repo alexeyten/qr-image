@@ -1,6 +1,6 @@
 {
   "name": "qr-image",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "QR Code generator (png, svg, pdf, eps)",
   "homepage": "https://github.com/alexeyten/qr-image",
   "keywords": [ "qrcode", "qr code", "qr", "png", "svg", "image" ],
