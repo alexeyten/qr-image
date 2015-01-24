@@ -33,7 +33,7 @@ var svg_string = qr.imageSync('I love QR!', { type: 'svg' });
 ### Methods
 
   * `qr.image(text, [ec_level | options])` — Readable stream with image data;
-  * `qr.imageSync(text, [ec_level | options])` — string with image data. (not implemented for `png`);
+  * `qr.imageSync(text, [ec_level | options])` — string with image data. (Buffer for `png`);
   * `qr.svgObject(text, [ec_level | options])` — object with SVG path and size;
   * `qr.matrix(text, [ec_level])` — 2D array.
 
@@ -53,15 +53,12 @@ var svg_string = qr.imageSync('I love QR!', { type: 'svg' });
 Changes
 -------
 
-  * `size` option is also used for SVG.
-  * Add experimental `parse_url` option. First attemt to mix modes.
-  * Fix weird bug witch CRC32 calculation on Raspberry Pi.
+  * Implement `imageSync` for `png`.
 
 
 TODO
 ----
 
   * Tests;
-  * `imageSync` for `png`.
   * mixing modes;
   * Kanji (???).
