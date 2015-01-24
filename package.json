@@ -5,13 +5,13 @@
   "homepage": "https://github.com/alexeyten/qr-image",
   "keywords": [ "qrcode", "qr code", "qr", "png", "svg", "image" ],
   "author": {
-      "name": "Alexey Ten",
-      "url": "http://git.io/alexeyten"
+    "name": "Alexey Ten",
+    "url": "http://git.io/alexeyten"
   },
   "license": "MIT",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/alexeyten/qr-image.git"
+    "type": "git",
+    "url": "https://github.com/alexeyten/qr-image.git"
   },
   "bugs": "https://github.com/alexeyten/qr-image/issues",
   "main": "./lib/qr.js",
@@ -21,5 +21,8 @@
   "files": [
     "lib",
     "LICENSE"
-  ]
+  ],
+  "optionalDependencies": {
+    "pako": "^0.2.5"
+  }
 }
