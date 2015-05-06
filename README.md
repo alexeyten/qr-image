@@ -1,6 +1,8 @@
 qr-image
 ========
 
+[![npm version](https://badge.fury.io/js/qr-image.svg)](https://badge.fury.io/js/qr-image)
+
 This is yet another QR Code generator.
 
 Overview
@@ -12,6 +14,14 @@ Overview
   * support UTF-8.
 
 [Releases](https://github.com/alexeyten/qr-image/releases/)
+
+
+Installing
+-----
+
+```shell
+npm install qr-image
+```
 
 Usage
 -----
