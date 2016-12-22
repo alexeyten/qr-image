@@ -63,7 +63,8 @@ var svg_string = qr.imageSync('I love QR!', { type: 'svg' });
 Changes
 -------
 
-  * Implement `imageSync` for `png`.
+  * Use `zlib.deflateSync` instead of `pako`.
+  * Fix deprecation warning for NodeJS 7.
 
 
 TODO
