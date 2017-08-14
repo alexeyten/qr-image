@@ -36,6 +36,20 @@ qr_svg.pipe(require('fs').createWriteStream('i_love_qr.svg'));
 var svg_string = qr.imageSync('I love QR!', { type: 'svg' });
 ```
 
+Example For generate images in client side:
+```javascript in your app.js
+var qr = require('qr-image');
+router.get('/qr', function(){
+  var code = qr.image('http://www.google.com', { type: 'png' });
+  res.setHeader('Content-type', 'image/png');  //sent qr image to client side
+  code.pipe(res);
+});
+```
+then in the html files:
+```
+<img src="/qr" alt="qrcode">
+```
+
 [More examples](./examples)
 
 `qr = require('qr-image')`
