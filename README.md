@@ -1,7 +1,7 @@
 qr-image-color
 ========
 
-<!-- [![npm version](https://badge.fury.io/js/qr-image-color.svg)](https://badge.fury.io/js/qr-image-color) -->
+[![npm version](https://badge.fury.io/js/qr-image-color.svg)](https://badge.fury.io/js/qr-image-color)
 
 This is a fork of awesome [alexeyten's](https://github.com/alexeyten/qr-image) qr-image generator.
 
