@@ -2,18 +2,18 @@
   "name": "qr-image-color",
   "version": "3.2.0",
   "description": "QR Code generator (png, svg, pdf, eps) with color and transparency support",
-  "homepage": "https://github.com/bockoblur/qr-image",
+  "homepage": "https://github.com/bockoblur/qr-image-color",
   "keywords": [ "qrcode", "qr code", "qr", "png", "svg", "image", "color", "transparency" ],
   "author": {
-    "name": "Slobodan Babic",
+    "name": "Slobodan Babić",
     "url": "http://git.io/bockoblur"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bockoblur/qr-image.git"
+    "url": "https://github.com/bockoblur/qr-image-color.git"
   },
-  "bugs": "https://github.com/bockoblur/qr-image/issues",
+  "bugs": "https://github.com/bockoblur/qr-image-color/issues",
   "main": "./lib/qr.js",
   "scripts": {
     "test": "./tests/testcolors.js"
