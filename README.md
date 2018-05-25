@@ -67,10 +67,15 @@ var pdf_string = qr.imageSync('I love Color QR!', { type: 'pdf', color: [0.7, 0,
 // use foreground color (RGB) and light gray (10% Black) background;
 var eps_string = qr.imageSync('I love Color QR!', { type: 'eps', color: [128, 0, 64], background: [0,0,0,0.1], transparent: false });
 
-// png with transparent background;
-var png_string = qr.imageSync('I love transparent QR in PNG!', { type: 'png', transparent: true });
+// png with purple color and transparent background;
+var png_string = qr.imageSync('I love transparent QR in PNG!', { type: 'png', color: "purple", transparent: true });
 
 ```
+
+### Example of transparent PNG with color "purple"
+
+![Screenshot](./examples/screenshot.jpg)
+
 
 [More examples](./examples)
 
