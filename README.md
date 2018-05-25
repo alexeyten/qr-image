@@ -1,7 +1,7 @@
 qr-image-color
 ========
 
-<!-- [![npm version](https://badge.fury.io/js/qr-image.svg)](https://badge.fury.io/js/qr-image) -->
+<!-- [![npm version](https://badge.fury.io/js/qr-image-color.svg)](https://badge.fury.io/js/qr-image-color) -->
 
 This is a fork of awesome [alexeyten's](https://github.com/alexeyten/qr-image) qr-image generator.
 
@@ -32,9 +32,9 @@ You can pass the `color` and `background` options in several ways:
 | **Data Type**         | **Color Model**                                                                                   |
 |-----------------------|---------------------------------------------------------------------------------------------------|
 | `string`              | RGB (as `#rrggbb`, with or without leading `#`; as `#rgb`, (short notation); or as CSS color name |
-| `number`              | Gray in range 0…1  (0=white, 1=black)                                                             |
+| `number`              | Gray in range 0.0…1.0  (0.0=black, 1.0=white)                                                     |
 | `Array(3)` of numbers | RGB (Components in range 0…255)                                                                   |
-| `Array(4)` of numbers | CMYK (Components in range 0…1)                                                                    |
+| `Array(4)` of numbers | CMYK (Components in range 0.0…1.0)                                                                |
 
 Color Model Support Overview
 -----
@@ -101,17 +101,9 @@ var png_string = qr.imageSync('I love transparent QR in PNG!', { type: 'png', co
     * `customize` (only png) — function to customize qr bitmap before encoding to PNG.
     * `parse_url` (experimental, default `false`) — try to optimize QR-code for URLs.
   * **NEW options**
-    * `transparent` (all types) For `PNG`, default is `false`, for vector formats default is `true`. I choose these defaults to keep the behaviour as it was earlier, in case  `transparent` option is not explicitly set. If set to `true`, then `background` parameter is ignored. If set to `false`, and no `background` is specified, background defaults to white. 
+    * `transparent` (`boolean`) For `PNG`, default is `false`, for vector formats default is `true`. I choose these defaults to keep the behaviour as it was earlier, in case  `transparent` option is not explicitly set. If set to `true`, then `background` parameter is ignored. If set to `false`, and no `background` is specified, background defaults to white. 
     * `color` color for code blocks. If omitted, default is pure black.
     * `background` color for code background. If omitted, default is transparent.
-
-### Color options
-
-  Colors (both foreground and background) can be passed as following types:
-
-  * `string` assumes `#rrggbb`, `#rgb` (short version), or `CSS color name`. In EPS and PDF it is converted to RGB color space. For SVG files, any valid CSS color expression can be used, such as `hsv(...)` or `rgba(...)`.
-  * `number` assumes gray value for EPS and PDF (range is 0..1, 0=black, 1=white). For SVG, it is converted to RGB space.
-  * `array` Depending on array length, it can be RGB (if length is 3) or CMYK (if length is 4) color model. Since SVG does not support CMYK, in SVG files it will be mapped to RGB. **NOTE:** RGB values are clamped to 0..255 range, and CMYK values are clamped to 0..1 range.
 
 TODO
 ----
