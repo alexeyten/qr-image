@@ -46,7 +46,7 @@ Color Model Support Overview
 | **CMYK**      |         ✓        |         ✓        | ⤑ Hex[2] |      ⤑ RGB[2]       |
 | **Hex Color** | ⤑ RGB | ⤑ RGB |         ✓        |       ⤑ RGB      |
 
-[1] **NOTE:** Generated QR-codes are *Indexed Color* PNG files.
+[1] **NOTE:** Generated QR-codes are *Indexed Color* PNG files. See note about  `customize` option below. 
 
 [2] No attempt has been made to use calibrated conversion from CMYK to RGB, so if you use CMYK colors in `SVG` or `PNG`, do not expect prepress-quality conversion. If you need precise CMYK color control, use `PDF` or `EPS` files, since they have native CMYK support.
 
@@ -56,7 +56,7 @@ Usage
 
 Examples:
 ```javascript
-var qr = require('qr-image');
+var qr = require('qr-image-color');
 
 var qr_svg = qr.image('I love Default QR (with black/transparent)!', { type: 'svg' });
 qr_svg.pipe(require('fs').createWriteStream('i_love_qr.svg'));
@@ -79,8 +79,6 @@ var png_string = qr.imageSync('I love transparent QR in PNG!', { type: 'png', co
 
 [More examples](./examples)
 
-`qr = require('qr-image')`
-
 ### Methods
 
   * `qr.image(text, [ec_level | options])` — Readable stream with image data;
@@ -98,7 +96,7 @@ var png_string = qr.imageSync('I love transparent QR in PNG!', { type: 'png', co
     * `type` — image type. Possible values `png` (default), `svg`, `pdf` and `eps`.
     * `size` (png and svg only) — size of one module in pixels. Default `5` for png and `undefined` for svg.
     * `margin` — white space around QR image in modules. Default `4` for `png` and `1` for others.
-    * `customize` (only png) — function to customize qr bitmap before encoding to PNG.
+    * `customize` (only png) — function to customize qr bitmap before encoding to PNG. **We are now using Index Color PNG instead of grayscale, so using this option will behave different**
     * `parse_url` (experimental, default `false`) — try to optimize QR-code for URLs.
   * **NEW options**
     * `transparent` (`boolean`) For `PNG`, default is `false`, for vector formats default is `true`. I choose these defaults to keep the behaviour as it was earlier, in case  `transparent` option is not explicitly set. If set to `true`, then `background` parameter is ignored. If set to `false`, and no `background` is specified, background defaults to white. 
