@@ -1,0 +1,11 @@
+{
+  "name": "qr-image-test",
+  "version": "1.0.0",
+  "dependencies": {
+      "qr-image": "3.2.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "private": true
+}
