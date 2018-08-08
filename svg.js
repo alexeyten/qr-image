@@ -14,8 +14,8 @@ function svgObject(text, options) {
     const path = vectorize(matrix).map((part) => (
         part.map((item) => (
             item[0] === 'M' ? `M${item[1] + margin} ${item[2] + margin}` : item.join('')
-        )).join('')
-    )).join('z') + 'z';
+        )).join('') + 'z'
+    )).join('');
 
     return {
         size: matrix.length + 2 * margin,
