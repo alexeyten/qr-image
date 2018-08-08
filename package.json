@@ -3,7 +3,14 @@
   "version": "3.2.0",
   "description": "QR Code generator (png, svg, pdf, eps)",
   "homepage": "https://github.com/alexeyten/qr-image",
-  "keywords": [ "qrcode", "qr code", "qr", "png", "svg", "image" ],
+  "keywords": [
+    "qrcode",
+    "qr code",
+    "qr",
+    "png",
+    "svg",
+    "image"
+  ],
   "author": {
     "name": "Alexey Ten",
     "url": "http://git.io/alexeyten"
@@ -16,10 +23,15 @@
   "bugs": "https://github.com/alexeyten/qr-image/issues",
   "main": "./lib/qr.js",
   "scripts": {
-    "test": "./tests/test.js"
+    "test": "./tests/test.js",
+    "lint": "eslint"
   },
   "files": [
     "lib",
     "LICENSE"
-  ]
+  ],
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-yandex-personal": "0.0.1"
+  }
 }
