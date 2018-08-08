@@ -28,6 +28,14 @@ Usage
 
 Example:
 ```javascript
+const svg = require('qr-image/svg');
+const image = svg('I love QR!');
+console.log(image); // <svg ...><path d="..."/></svg>
+```
+
+
+Old:
+```javascript
 var qr = require('qr-image');
 
 var qr_svg = qr.image('I love QR!', { type: 'svg' });
