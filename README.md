@@ -59,7 +59,7 @@ then in the html files:
   * `qr.image(text, [ec_level | options])` — Readable stream with image data;
   * `qr.imageSync(text, [ec_level | options])` — string with image data. (Buffer for `png`);
   * `qr.svgObject(text, [ec_level | options])` — object with SVG path and size;
-  * `qr.matrix(text, [ec_level])` — 2D array.
+  * `qr.matrix(text, [ec_level])` — 2D array of booleans. __Y__ is indexed first (e.g. `[y][x]` NOT `[x][y]`), `[0][0]` is the top left, and `true` means black.
 
 
 ### Options
