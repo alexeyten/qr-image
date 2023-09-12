@@ -1,3 +1,4 @@
 /qr-image-*.tgz
 .*.swp
 /node_modules
+/Docs
