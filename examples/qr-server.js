@@ -1,6 +1,6 @@
-var http = require('node:http');
-var url = require('node:url');
-var qr = require('../');
+import http from 'node:http';
+import url from 'node:url';
+import qr from '../lib/qr.js';
 
 http.createServer(function (req, res) {
     var text = url.parse(req.url, true).query.text;

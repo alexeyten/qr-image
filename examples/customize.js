@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 'use strict';
 
-const qr = require('../');
+import fs from 'node:fs';
+import qr from '../lib/qr.js';
 
 function coord2offset(x, y, size) {
     return (size + 1) * y + x + 1;
@@ -40,5 +41,5 @@ qr.image('Customize PNG', {
     type: 'png',
     customize
 }).pipe(
-    require('node:fs').createWriteStream('custom.png')
+    fs.createWriteStream('custom.png')
 );

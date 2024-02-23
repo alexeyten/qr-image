@@ -1,11 +1,12 @@
 #!/usr/bin/env node
+import fs from 'node:fs';
+var __dirname = process.cwd();
 
-var fs = require('node:fs');
 function file(name) {
     return fs.createWriteStream(__dirname + '/' + name);
 }
 
-var qr = require('./../');
+import qr from '../lib/qr.js';
 var text = 'I \u2764\uFE0F QR code!';
 var text = 'https://yadi.sk/d/FuzPeEg-QyaZN?qr';
 var ec_level = 'Q';
