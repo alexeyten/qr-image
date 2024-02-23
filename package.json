@@ -3,7 +3,14 @@
   "version": "3.2.0",
   "description": "QR Code generator (png, svg, pdf, eps)",
   "homepage": "https://github.com/alexeyten/qr-image",
-  "keywords": [ "qrcode", "qr code", "qr", "png", "svg", "image" ],
+  "keywords": [
+    "qrcode",
+    "qr code",
+    "qr",
+    "png",
+    "svg",
+    "image"
+  ],
   "author": {
     "name": "Alexey Ten",
     "url": "http://git.io/alexeyten"
@@ -22,5 +29,8 @@
   "files": [
     "lib",
     "LICENSE"
-  ]
+  ],
+  "dependencies": {
+    "pako": "^2.1.0"
+  }
 }
