@@ -1,58 +1,34 @@
-qr-image
+cf-qr-image
 ========
+This is a fork of [qr-image](https://github.com/alexeyten/qr-image) that works on CloudFlare Workers. It replaces the CommonJS `require` with ES6 `import` and updates all dependencies to use the new `node:<module>` import syntax. It also removes the `zlib` dependency and replaces it with `pako` to work around the lack of `zlib` in CloudFlare Workers.
 
-[![npm version](https://badge.fury.io/js/qr-image.svg)](https://badge.fury.io/js/qr-image)
-
-This is yet another QR Code generator.
+This is yet ~~another~~ the best Cloudflare QR Code generator.
 
 Overview
 --------
 
-  * No dependecies;
+  * ~~No dependecies~~ Only `pako` for CloudFlare Workers, because `zlib` is not available;
   * generate image in `png`, `svg`, `eps` and `pdf` formats;
   * numeric and alphanumeric modes;
   * support UTF-8.
-
-[Releases](https://github.com/alexeyten/qr-image/releases/)
 
 
 Installing
 -----
 
 ```shell
-npm install qr-image
+npm install git+git@github.com:SteffTek/cf-qr-image.git#main
 ```
+Maybe I'll publish it to npm at some point, but for now you'll have to use the git URL.
 
 Usage
 -----
 
 Example:
-```javascript
-var qr = require('qr-image');
-
-var qr_svg = qr.image('I love QR!', { type: 'svg' });
-qr_svg.pipe(require('fs').createWriteStream('i_love_qr.svg'));
-
-var svg_string = qr.imageSync('I love QR!', { type: 'svg' });
+```typescript
+import qr from 'qr-image';
+const qr_svg = qr.imageSync('I love QR!', { type: 'svg' });
 ```
-
-Example For generate images in client side:
-```javascript in your app.js
-var qr = require('qr-image');
-router.get('/qr', function(){
-  var code = qr.image('http://www.google.com', { type: 'png' });
-  res.setHeader('Content-type', 'image/png');  //sent qr image to client side
-  code.pipe(res);
-});
-```
-then in the html files:
-```
-<img src="/qr" alt="qrcode">
-```
-
-[More examples](./examples)
-
-`qr = require('qr-image')`
 
 ### Methods
 
@@ -77,8 +53,7 @@ then in the html files:
 Changes
 -------
 
-  * Use `zlib.deflateSync` instead of `pako`.
-  * Fix deprecation warning for NodeJS 7.
+  * ~~Use `zlib.deflateSync` instead of `pako`.~~ Use `pako` instead of `zlib` to work around the lack of `zlib` in CloudFlare Workers.
 
 
 TODO
