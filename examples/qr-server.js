@@ -1,5 +1,5 @@
-var http = require('http');
-var url = require('url');
+var http = require('node:http');
+var url = require('node:url');
 var qr = require('../');
 
 http.createServer(function (req, res) {

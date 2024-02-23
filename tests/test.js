@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var fs = require('fs');
+var fs = require('node:fs');
 function file(name) {
     return fs.createWriteStream(__dirname + '/' + name);
 }

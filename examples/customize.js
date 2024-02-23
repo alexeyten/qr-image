@@ -40,5 +40,5 @@ qr.image('Customize PNG', {
     type: 'png',
     customize
 }).pipe(
-    require('fs').createWriteStream('custom.png')
+    require('node:fs').createWriteStream('custom.png')
 );
